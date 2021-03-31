@@ -67,9 +67,16 @@ def make_text(chains):
     """Return text from chains."""
 
     words = []
+    
+    key = choice(list(chains.keys()))
+    words = [key[0],key[1]]
+    
+    while key in chains:
+        word = choice(chains[key])
+        key = (key[1], word)
 
-    # your code goes here
-
+        words.append(word)
+    
     return ' '.join(words)
 
 
