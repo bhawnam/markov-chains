@@ -54,6 +54,10 @@ def make_chains(text_string):
             chains[key].append(value)    
         
         # Alternate solution
+        # value = chains.get(key,[])
+        # value.append(words[index+2])
+        # chains[key] = value
+
 
     # print(chains)
     return chains
